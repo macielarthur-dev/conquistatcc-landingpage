@@ -56,7 +56,8 @@
     nav.scrolled { background: rgba(255,255,255,.96); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(0,0,0,.08); padding: 13px 0; }
     .nav-wrap { display: flex; align-items: center; justify-content: space-between; }
     .nav-brand { display: flex; align-items: center; gap: 11px; z-index: 150; }
-    .nav-brand img { height: 46px; width: 46px; border-radius: 50%; object-fit: contain; }
+    .nav-brand img { height: 46px; width: 46px; border-radius: 50%; object-fit: contain; background: var(--white); padding: 2.5px; transition: background .3s, padding .3s; }
+    nav.scrolled .nav-brand img { background: transparent; padding: 0; }
     
     /* Nav typography on default (over dark hero) */
     .nav-brand-text { font-family: var(--display); font-weight: 700; font-size: 1.2rem; color: var(--white); line-height: 1.1; transition: color .3s; }
@@ -265,7 +266,7 @@
     .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 56px; margin-bottom: 44px; }
     .f-brand p { font-size: .85rem; color: rgba(255,255,255,.38); line-height: 1.7; margin-top: 14px; max-width: 280px; }
     .f-logo { display: flex; align-items: center; gap: 10px; }
-    .f-logo img { height: 38px; width: 38px; border-radius: 50%; object-fit: contain; }
+    .f-logo img { height: 38px; width: 38px; border-radius: 50%; object-fit: contain; background: var(--white); padding: 2px; }
     .f-logo-t { font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--white); }
     footer h4 { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.28); margin-bottom: 18px; }
     footer ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
