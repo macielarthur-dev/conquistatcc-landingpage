@@ -145,7 +145,7 @@
     .lottie-badge-text span { color: var(--blue); }
 
     /* ── STRIP ── */
-    .strip { background: var(--blue); padding: 18px 0; }
+    .strip { background: var(--near-black); border-top: 1px solid rgba(255,255,255,.06); padding: 18px 0; }
     .strip-inner { display: flex; align-items: center; justify-content: center; gap: 44px; flex-wrap: wrap; }
     .strip-item { display: flex; align-items: center; gap: 9px; color: var(--white); font-size: .88rem; font-weight: 500; }
     .strip-n { font-family: var(--display); font-size: 1.5rem; font-weight: 900; line-height: 1; }
@@ -279,13 +279,32 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 28px; display: flex; align-items: center; justify-content: space-between; }
     .footer-bottom p { font-size: .76rem; color: rgba(255,255,255,.22); }
 
+    /* ── LIVE INDICATOR ── */
+    .hero-live { display: inline-flex; align-items: center; gap: 7px; background: rgba(74,222,128,.1); border: 1px solid rgba(74,222,128,.28); border-radius: 100px; padding: 5px 13px; font-size: .78rem; color: #4ade80; font-weight: 600; margin-bottom: 18px; }
+    .live-dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; flex-shrink: 0; animation: blink 1.5s infinite; }
+
+    /* ── MICRO-COPY ── */
+    .cta-micro { font-size: .75rem; color: rgba(255,255,255,.4); margin-top: 11px; letter-spacing: .01em; }
+    .cta-micro.on-light { color: var(--gray-light); }
+
     /* ── WHATSAPP FLOAT ── */
-    .wa-btn { position: fixed; bottom: 26px; right: 26px; width: 58px; height: 58px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(37,211,102,.4); z-index: 200; transition: transform .25s, box-shadow .25s; }
-    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 26px rgba(37,211,102,.55); }
-    .wa-btn svg { width: 30px; height: 30px; fill: white; }
+    .wa-btn { position: fixed; bottom: 80px; right: 20px; height: 52px; border-radius: 100px; background: #25d366; display: flex; align-items: center; gap: 10px; padding: 0 20px 0 14px; box-shadow: 0 4px 18px rgba(37,211,102,.45); z-index: 200; transition: transform .25s, box-shadow .25s; }
+    .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 26px rgba(37,211,102,.6); }
+    .wa-btn svg { width: 26px; height: 26px; fill: white; flex-shrink: 0; }
+    .wa-label { font-size: .85rem; font-weight: 700; color: white; white-space: nowrap; }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 198; background: var(--black); border-top: 1px solid rgba(255,255,255,.08); padding: 12px 20px; display: none; }
+    .sticky-cta-inner { display: flex; align-items: center; gap: 12px; }
+    .sticky-cta-text { flex: 1; font-size: .78rem; line-height: 1.3; color: rgba(255,255,255,.55); }
+    .sticky-cta-text strong { display: block; color: var(--white); font-size: .88rem; }
+    .sticky-cta .btn { flex-shrink: 0; padding: 11px 18px; font-size: .88rem; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
+      .sticky-cta { display: block; }
+      .wa-btn { bottom: 84px; right: 16px; padding: 0 14px 0 11px; gap: 8px; height: 48px; }
+      .wa-label { display: none; }
       .hero-inner { grid-template-columns: 1fr; }
       .hero-visual { display: flex; margin-top: 8px; }
       .lottie-wrap lottie-player { height: 280px; }
@@ -357,9 +376,21 @@
 <body>
 
 <!-- WhatsApp float -->
-<a href="https://wa.me/554784729607" class="wa-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a href="https://wa.me/554784729607" class="wa-btn" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <span class="wa-label">Falar agora</span>
 </a>
+
+<!-- Sticky mobile CTA -->
+<div class="sticky-cta">
+  <div class="sticky-cta-inner">
+    <div class="sticky-cta-text">
+      <strong>Consultores disponíveis agora</strong>
+      Grátis · Sem compromisso
+    </div>
+    <a href="https://wa.me/554784729607" class="btn btn-primary">Falar no WhatsApp</a>
+  </div>
+</div>
 
 <!-- Nav -->
 <nav id="nav">
@@ -397,13 +428,15 @@
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-badge reveal">Assessoria Especializada em TCC</div>
-        <h1 class="reveal d1">Seu TCC,<br>do início à <em>aprovação.</em></h1>
-        <p class="hero-sub reveal d2">Orientação acadêmica completa com consultores especializados na sua área. Prazos garantidos, atendimento humanizado e total sigilo.</p>
-        <div class="hero-ctas reveal d3">
-          <a href="https://wa.me/554784729607" class="btn btn-primary">Quero minha consultoria gratuita</a>
+        <div class="hero-live reveal"><span class="live-dot"></span>Consultores disponíveis agora</div>
+        <div class="hero-badge reveal d1">Assessoria Especializada em TCC</div>
+        <h1 class="reveal d2">Seu TCC,<br>do início à <em>aprovação.</em></h1>
+        <p class="hero-sub reveal d3">Do tema à defesa — consultores especializados na sua área, entrega no prazo e 100% de sigilo. Mais de 2.000 alunos já aprovaram.</p>
+        <div class="hero-ctas reveal d4">
+          <a href="https://wa.me/554784729607" class="btn btn-primary">Falar agora — é grátis ↗</a>
           <a href="#como-funciona" class="btn btn-ghost">Como funciona</a>
         </div>
+        <div class="cta-micro reveal d4">✓ Sem compromisso &nbsp;·&nbsp; ✓ Resposta em minutos &nbsp;·&nbsp; ✓ Sigilo total</div>
         <div class="hero-trust reveal d4">
           <div class="avatars">
             <div class="av av1">M</div>
@@ -454,8 +487,8 @@
   <div class="container">
     <div class="problem-head">
       <div class="stag reveal">A realidade de quem está no prazo</div>
-      <h2 class="stitle reveal d1">Você se identifica com alguma dessas situações?</h2>
-      <p class="ssub reveal d2">A maioria dos alunos chega até nós depois de meses travados. Você não está sozinho — e tem solução.</p>
+      <h2 class="stitle reveal d1">Você está travado. O prazo não espera.</h2>
+      <p class="ssub reveal d2">A maioria dos alunos chega até nós depois de meses parado. Tem solução — e é mais simples do que parece.</p>
     </div>
     <div class="pain-grid">
       <div class="pain-card reveal">
@@ -494,10 +527,12 @@
 <div class="cta-band">
   <div class="container">
     <div class="cta-band-inner">
-      <h3>Tem prazo chegando?<br><span>A gente resolve com você.</span></h3>
+      <h3>Prazo chegando?<br><span>Manda mensagem. Atendemos hoje.</span></h3>
       <div class="cta-band-btns">
-        <a href="https://wa.me/554784729607" class="btn btn-primary">Falar no WhatsApp agora</a>
-        <a href="#como-funciona" class="btn btn-ghost">Ver como funciona</a>
+        <div>
+          <a href="https://wa.me/554784729607" class="btn btn-primary">Falar agora — é grátis ↗</a>
+          <div class="cta-micro" style="margin-top:8px">✓ Resposta em minutos &nbsp;·&nbsp; ✓ Sem compromisso</div>
+        </div>
       </div>
     </div>
   </div>
@@ -577,8 +612,8 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:56px" class="reveal d3">
-      <a href="https://wa.me/554784729607" class="btn btn-primary" style="font-size:1.05rem;padding:17px 36px;">Começar agora pelo WhatsApp →</a>
-      <p style="margin-top:14px;font-size:.8rem;color:rgba(255,255,255,.35);">Primeira consulta gratuita · Sem compromisso · Total sigilo</p>
+      <a href="https://wa.me/554784729607" class="btn btn-primary" style="font-size:1.05rem;padding:17px 36px;">Começar agora — é grátis ↗</a>
+      <div class="cta-micro" style="margin-top:12px">✓ Sem compromisso &nbsp;·&nbsp; ✓ Resposta em minutos &nbsp;·&nbsp; ✓ Sigilo total</div>
     </div>
   </div>
 </section>
@@ -616,6 +651,9 @@
           <div><div class="t-name">Juliana P.</div><div class="t-course">Psicologia · PUC</div></div>
         </div>
       </div>
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <a href="https://wa.me/554784729607" class="btn btn-primary">Quero ser o próximo caso de sucesso →</a>
+      <div class="cta-micro on-light" style="margin-top:10px">✓ Grátis &nbsp;·&nbsp; ✓ Sem compromisso &nbsp;·&nbsp; ✓ Resposta em minutos</div>
     </div>
   </div>
 </section>
@@ -716,9 +754,10 @@
       </div>
       <div class="faq-cta reveal d2">
         <h3>Ainda com dúvidas?</h3>
-        <p>Fale diretamente com um de nossos consultores. A primeira conversa é gratuita e sem compromisso.</p>
-        <a href="https://wa.me/554784729607" class="btn btn-primary">Falar no WhatsApp</a>
-        <p class="faq-note">Atendimento de segunda a sábado, das 8h às 22h</p>
+        <p>Manda mensagem agora. A primeira conversa é gratuita e sem compromisso — a gente responde rápido.</p>
+        <a href="https://wa.me/554784729607" class="btn btn-primary">Falar agora — é grátis ↗</a>
+        <div class="cta-micro" style="margin-top:10px">✓ Resposta em minutos</div>
+        <p class="faq-note" style="margin-top:14px">Seg a sáb · 8h às 22h · Consultores reais</p>
       </div>
     </div>
   </div>
@@ -727,9 +766,10 @@
 <!-- Final CTA -->
 <section class="final">
   <div class="container">
-    <h2 class="reveal">Sua formatura está<br>mais perto do que parece.</h2>
-    <p class="reveal d1">Não deixe o TCC travar o seu futuro. Com a orientação certa, você vai chegar lá — na data que você precisa.</p>
-    <a href="https://wa.me/554784729607" class="btn btn-white reveal d2">Quero garantir minha aprovação →</a>
+    <h2 class="reveal">Não deixe o TCC<br>travar sua formatura.</h2>
+    <p class="reveal d1">Cada dia que passa é um dia a menos. Manda mensagem agora — a gente começa hoje.</p>
+    <a href="https://wa.me/554784729607" class="btn btn-white reveal d2" style="font-size:1.1rem;padding:18px 40px;">Falar agora — é grátis ↗</a>
+    <div class="cta-micro reveal d3" style="color:rgba(255,255,255,.5);margin-top:14px">✓ Sem compromisso &nbsp;·&nbsp; ✓ Resposta em minutos &nbsp;·&nbsp; ✓ Sigilo total</div>
   </div>
 </section>
 
