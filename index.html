@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -242,13 +242,13 @@
     .pillar-ico { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
     .pillar-ico.blue { background: var(--blue-faint); }
     .pillar-ico.black { background: var(--black); }
-    .pillar h4 { font-weight: 700; font-size: .95rem; color: var(--black); margin-bottom: 3px; }
+    .pillar h3 { font-weight: 700; font-size: .95rem; color: var(--black); margin-bottom: 3px; }
     .pillar p { font-size: .84rem; color: var(--gray); line-height: 1.6; }
     .sigilo-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .sigilo-card { background: var(--white); border: 1px solid #e5e5e5; border-radius: 14px; padding: 28px; text-align: center; transition: border-color .25s, box-shadow .25s; }
     .sigilo-card:hover { border-color: rgba(200,111,231,.3); box-shadow: 0 6px 24px rgba(200,111,231,.08); }
     .sigilo-card-ico { font-size: 2rem; margin-bottom: 12px; }
-    .sigilo-card h4 { font-family: var(--display); font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 6px; }
+    .sigilo-card h3 { font-family: var(--display); font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 6px; }
     .sigilo-card p { font-size: .8rem; color: var(--gray); line-height: 1.55; }
 
     @media (max-width: 960px) {
@@ -268,7 +268,7 @@
     .f-logo { display: flex; align-items: center; gap: 10px; }
     .f-logo img { height: 38px; width: 38px; border-radius: 50%; object-fit: contain; background: var(--white); padding: 2px; }
     .f-logo-t { font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--white); }
-    footer h4 { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.28); margin-bottom: 18px; }
+    footer h3 { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.28); margin-bottom: 18px; }
     footer ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
     footer ul li a { font-size: .87rem; color: rgba(255,255,255,.5); transition: color .2s; }
     footer ul li a:hover { color: var(--blue); }
@@ -670,21 +670,21 @@
           <div class="pillar">
             <div class="pillar-ico blue">🔒</div>
             <div>
-              <h4>Sigilo absoluto garantido</h4>
+              <h3>Sigilo absoluto garantido</h3>
               <p>Seu nome, seu trabalho e qualquer informação pessoal ficam estritamente entre você e seu consultor. Ponto.</p>
             </div>
           </div>
           <div class="pillar">
             <div class="pillar-ico blue">🏢</div>
             <div>
-              <h4>Empresa séria e registrada</h4>
+              <h3>Empresa séria e registrada</h3>
               <p>Somos uma empresa legalmente constituída, com CNPJ ativo e anos de operação no mercado de consultoria acadêmica.</p>
             </div>
           </div>
           <div class="pillar">
             <div class="pillar-ico blue">💬</div>
             <div>
-              <h4>Atendimento humanizado</h4>
+              <h3>Atendimento humanizado</h3>
               <p>Nada de robôs ou respostas automáticas. Você fala com consultores reais que entendem a sua situação.</p>
             </div>
           </div>
@@ -694,27 +694,27 @@
       <div class="sigilo-cards reveal d2">
         <div class="sigilo-card">
           <div class="sigilo-card-ico">🔐</div>
-          <h4>Dados protegidos</h4>
+          <h3>Dados protegidos</h3>
           <p>Nenhuma informação sua é armazenada ou repassada. Privacidade total.</p>
         </div>
         <div class="sigilo-card">
           <div class="sigilo-card-ico">✅</div>
-          <h4>+2.000 aprovados</h4>
+          <h3>+2.000 aprovados</h3>
           <p>Milhares de alunos já confiaram na Conquista TCC — e todos foram aprovados.</p>
         </div>
         <div class="sigilo-card">
           <div class="sigilo-card-ico">⚡</div>
-          <h4>Prazo garantido</h4>
+          <h3>Prazo garantido</h3>
           <p>Combinamos a data de entrega e cumprimos. Sem desculpas, sem atrasos.</p>
         </div>
         <div class="sigilo-card">
           <div class="sigilo-card-ico">🎯</div>
-          <h4>Especialista na sua área</h4>
+          <h3>Especialista na sua área</h3>
           <p>Seu trabalho vai para o consultor certo — não para qualquer pessoa.</p>
         </div>
         <div class="sigilo-card" style="grid-column:span 2">
           <div class="sigilo-card-ico">🤝</div>
-          <h4>Sem compromisso na primeira conversa</h4>
+          <h3>Sem compromisso na primeira conversa</h3>
           <p>O primeiro contato é gratuito. Nos conte sua situação, tire suas dúvidas e decida sem pressão.</p>
         </div>
       </div>
@@ -779,13 +779,13 @@
     <div class="footer-grid">
       <div class="f-brand">
         <div class="f-logo">
-          <img src="assets/logo-semfundo.png" alt="Conquista TCC">
+          <img src="assets/logo-semfundo.png" alt="Conquista TCC" loading="lazy">
           <div class="f-logo-t">Conquista TCC</div>
         </div>
         <p>Assessoria acadêmica especializada para alunos que precisam de suporte real para concluir o TCC com qualidade e dentro do prazo.</p>
       </div>
       <div>
-        <h4>Serviços</h4>
+        <h3>Serviços</h3>
         <ul>
           <li><a href="#servicos">Assessoria Completa</a></li>
           <li><a href="#servicos">Revisão e Formatação</a></li>
@@ -795,7 +795,7 @@
         </ul>
       </div>
       <div>
-        <h4>Contato</h4>
+        <h3>Contato</h3>
         <div class="footer-social">
           <a href="https://wa.me/554784729607" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -842,6 +842,7 @@
       const isOpen = menuToggle.classList.toggle('active');
       navLinks.classList.toggle('active');
       menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
       document.body.style.overflow = isOpen ? 'hidden' : '';
     };
 
@@ -854,6 +855,7 @@
           menuToggle.classList.remove('active');
           navLinks.classList.remove('active');
           menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Abrir menu de navegação');
           document.body.style.overflow = '';
         }
       });
@@ -861,14 +863,29 @@
   }
 
   // FAQ Accordion
-  document.querySelectorAll('.faq-q').forEach(btn => {
+  document.querySelectorAll('.faq-q').forEach((btn, index) => {
+    // Dynamic WAI-ARIA values for perfect PageSpeed / Lighthouse Accessibility audit
+    btn.setAttribute('aria-controls', `faq-a-${index}`);
+    btn.setAttribute('aria-expanded', 'false');
+    const ans = btn.closest('.faq-item').querySelector('.faq-a');
+    if (ans) ans.setAttribute('id', `faq-a-${index}`);
+
     btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const ans = item.querySelector('.faq-a');
       const was = btn.classList.contains('open');
-      document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+      
+      // Close all accordions first
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.classList.remove('open');
+        b.setAttribute('aria-expanded', 'false');
+      });
       document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
-      if (!was) { btn.classList.add('open'); ans.classList.add('open'); }
+      
+      // Open only if it wasn't open
+      if (!was) { 
+        btn.classList.add('open'); 
+        btn.setAttribute('aria-expanded', 'true');
+        if (ans) ans.classList.add('open'); 
+      }
     });
   });
 
