@@ -909,6 +909,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
     });
   });
+
+  // Track WhatsApp button clicks via dataLayer
+  document.addEventListener('click', function(e) {
+    const target = e.target.closest('a');
+    if (target && target.href && (target.href.includes('wa.me') || target.href.includes('whatsapp.com'))) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'whatsapp_click',
+        'click_text': target.innerText.trim() || target.getAttribute('aria-label') || 'WhatsApp Float'
+      });
+    }
+  });
 </script>
 </body>
 </html>
